@@ -1,0 +1,107 @@
+@use "includes/varibles.scss" as *;
+
+@mixin font($size, $weight, $line_height) {
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $line_height
+}
+
+@mixin font-color($size, $weight, $line_height, $color) {
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $line_height;
+    color: $color
+}
+
+@mixin font-color-mb($size, $weight, $line_height, $color, $margin) {
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $line_height;
+    color: $color;
+    margin-bottom: $margin;
+}
+
+@mixin flex($gap) {
+    display: flex;
+    align-items: center;
+    gap: $gap
+}
+
+@mixin link($color: $main-color, $color-hover: $second-color) {
+    color: $color;
+    transition: $main-transition;
+    word-break: break-word;
+
+    &:hover {
+        color: $color-hover
+    }
+}
+
+@mixin background-image($url, $position: "center") {
+    background-image: url($url);
+    background-position: $position;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin input($border: false, $padding, $radius, $color) {
+    @if $border {
+        border: 1px solid $border;
+    } @else {
+        border: none;
+    }
+    outline: none;
+    display: block;
+    width: 100%;
+    padding: $padding;
+    border-radius: $radius;
+    color: $color;
+    caret-color: $second-color;
+
+    &::placeholder {
+        color: rgba(84, 86, 91, .4);
+    }
+}
+
+@mixin button($color, $b-color, $b-hover) {
+    color: $color;
+    transition: $main-transition;
+    background-color: $b-color;
+
+    &:hover {
+        background-color: $b-hover;
+    }
+}
+
+@mixin overlay($color) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $color;
+}
+
+@mixin circle($width) {
+    width: $width;
+    height: $width;
+    border-radius: 50%;
+}
+
+@mixin input-number {
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    &[type=number] {
+        -moz-appearance: textfield;
+    }
+}

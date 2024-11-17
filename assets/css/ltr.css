@@ -1,0 +1,185 @@
+/*********************************************************************
+************************* Style Global Rouls *************************
+*********************************************************************/
+
+@font-face {
+    font-family: "Evermore";
+    src: url("../fonts/Evermore.ttf") format("truetype");
+    font-weight: normal;
+}
+
+/*************************** Main style ******************************/
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+input, textarea {
+    direction: ltr !important;
+}
+
+#dashboard-header .sidemenu-toggler svg,
+#dashboard-header .mobile-toggler svg,
+.student-heading .link svg,
+.code-alert .link svg,
+.student-option .profile-link .arrow svg,
+.student-option .method-link svg {
+    transform: rotate(180deg);
+}
+
+/*************************** components ******************************/
+.lang {
+    justify-content: flex-start;
+}
+
+.custom-select label {
+    right: auto;
+}
+
+.main-heading .special-word {
+    background-position: 0 8px;
+}
+
+
+/*************************** Header Page ******************************/
+
+/*************************** Footer Page ******************************/
+
+/*************************** Home Page ******************************/
+
+.home-scenes .image-scene:nth-child(1) {
+    -webkit-animation: bounce 1.5s linear infinite;
+            animation: bounce 1.5s linear infinite;
+}
+.home-scenes .image-scene:nth-child(2) {
+    -webkit-animation: rotateIn 1.5s linear infinite;
+            animation: rotateIn 1.5s linear infinite;
+}
+.home-scenes .image-scene:nth-child(3) {
+    -webkit-animation: zoomIn 1.5s linear infinite;
+            animation: zoomIn 1.5s linear infinite;
+    -webkit-animation-fill-mode: backwards;
+            animation-fill-mode: backwards;
+    -webkit-animation-direction: alternate;
+            animation-direction: alternate;
+}
+.home-scenes .image-scene:nth-child(4) {
+    -webkit-animation: flash 1.5s linear infinite;
+            animation: flash 1.5s linear infinite;
+    -webkit-animation-direction: alternate;
+            animation-direction: alternate;
+}
+
+.home-scenes .image-scene:nth-child(5) {
+    -webkit-animation: rotate50 1s linear infinite;
+            animation: rotate50 1s linear infinite;
+    -webkit-animation-fill-mode: backwards;
+            animation-fill-mode: backwards;
+    -webkit-animation-direction: alternate;
+            animation-direction: alternate;
+}
+
+.home-scenes .image-scene:nth-child(6) {
+    -webkit-animation: rotateOut 1.5s linear infinite;
+            animation: rotateOut 1.5s linear infinite;
+}
+
+.teacher-popup .btn-close {
+    left: auto;
+    right: 30px;
+}
+@media (max-width: 767px) {
+    .teacher-popup .btn-close {
+        left: auto;
+        right: 22px;;
+    }
+}
+
+.home-heading .special-word,
+#footer .copywrite a {
+    font-family: Evermore;
+    text-transform: lowercase;
+    font-size: .5em;
+}
+
+/*************************** Teacher Page ******************************/
+
+/*************************** register Page ******************************/
+
+.register-form .input-field label {
+    right: auto;
+    left: 12px;
+}
+.register-form .input-field input,
+.register-form .input-field select {
+    padding-left: 25px;
+    padding-right: 50px;
+}
+.register-form .profile-field.password input {
+    padding-left: 25px;
+    padding-right: 50px;
+}
+.register-form .input-field .icon {
+    left: auto;
+    right: 25px;
+}
+.register-form .input-field .eye {
+    left: auto;
+    right: 50px;
+    top: 12px;
+}
+.register-form .profile-field .eye {
+    left: auto;
+    right: 25px;
+}
+@media (max-width: 575px) {
+    .register-form .input-field input,
+    .register-form .input-field select {
+        padding-left: 16px;
+        padding-right: 40px;
+    }
+    .register-form .profile-field.password input {
+        padding-left: 16px;
+        padding-right: 40px;
+    }
+    .register-form .input-field .icon {
+        left: auto;
+        right: 16px;
+    }
+    .register-form .input-field .eye {
+        left: auto;
+        right: 40px;
+    }
+    .register-form .profile-field .eye {
+        left: auto;
+        right: 16px;
+    }
+}
+
+/*********************** Student Header *************************/
+.logout .icon svg {
+    transform: rotate(0deg);
+}
+
+#dashboard-header .header-action .action .alert-tooltip {
+    transform: translate(100%, -100%);
+    left: auto;
+    right: -2px;
+}
+
+
+/*********************** Start style Side Menu *************************/
+#side-menu {
+    width: 250px;
+}
+
+.sidemenu-links li:not(:last-of-type)::after {
+    transform: translate(50%, -50%);
+    left: auto;
+    right: -12px;
+}
+
+/***********************  Student pages *************************/
+.student-option .profile-link .heading {
+    width: 120px;
+}
+/***********************  teacher pages *************************/
